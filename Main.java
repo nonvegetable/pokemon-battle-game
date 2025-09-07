@@ -1,4 +1,4 @@
-import java.util.*;
+1mport java.util.*;
 
 class Main{
 	public static void main(String args[]){
@@ -13,7 +13,7 @@ class Main{
 			
 			if(startInput == 1){
 				System.out.println("Game started");
-				//startGame();
+				startGame();
 				break;
 			} else if(startInput == 2){
 				System.out.println("Game quit");
@@ -29,6 +29,12 @@ class Main{
 	}
 
 	public static void startGame(){
-		
+        PokemonService service = new PokemonService();
+        List<Pokemon> team = service.getRandomTeam();
+
+        System.out.println("Your Pokémon team:");
+        for (Pokemon p : team) {
+            System.out.println("Name: " + p.name + ", Level: " + p.level + ", Types: " + p.type + ", Moves: " + p.moves);
+        }
 	}
 }

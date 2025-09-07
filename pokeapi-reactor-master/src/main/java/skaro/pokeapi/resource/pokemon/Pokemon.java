@@ -22,7 +22,7 @@ public class Pokemon implements PokeApiResource {
 	private List<VersionGameIndex> gameIndices;
 	private List<PokemonHeldItem> heldItems;
 	private String locationAreaEncounters;
-	private List<PokemonMove> moves;
+	public List<PokemonMove> moves;
 	private PokemonSprites sprites;
 	private NamedApiResource<PokemonSpecies> species;
 	private List<PokemonStat> stats;
